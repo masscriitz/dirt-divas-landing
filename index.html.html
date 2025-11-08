@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirt Divas Acquisitions - We Buy Land Fast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #a855f7 0%, #d946ef 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-placeholder {
+            background: rgba(255,255,255,0.2);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #a855f7;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1f2937;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(168, 85, 247, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #a855f7;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .why-us h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1f2937;
+        }
+
+        .comparison {
+            background: linear-gradient(135deg, #f3e8ff 0%, #fae8ff 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+        }
+
+        .comparison h3 {
+            color: #a855f7;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .comparison-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #a855f7;
+        }
+
+        .comparison-item strong {
+            color: #a855f7;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 80px 20px;
+            background: #f9fafb;
+        }
+
+        .process h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #1f2937;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            position: relative;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #a855f7 0%, #d946ef 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            color: #a855f7;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .team h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1f2937;
+        }
+
+        .team-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: #4b5563;
+        }
+
+        .team-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit {
+            background: linear-gradient(135deg, #f3e8ff 0%, #fae8ff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #a855f7;
+        }
+
+        .benefit h3 {
+            color: #a855f7;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #a855f7 0%, #d946ef 100%);
+            color: white;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .form-section p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            padding: 60px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .form-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, #a855f7 0%, #d946ef 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+
+        .form-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-logo {
+                max-width: 300px;
+            }
+
+            .features h2, .why-us h2, .process h2, .team h2, .form-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <p style="font-size: 1.2rem; margin-bottom: 10px;">👩‍💼 Michelle & Samantha 👩‍💼</p>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">[Add your logo image here when deploying to your website]</p>
+                </div>
+            </div>
+            <h1>DIRT DIVAS ACQUISITIONS</h1>
+            <p class="tagline">Sell Your Land Fast • Cash Offers • No Hassles</p>
+            <a href="https://form.jotform.com/253114648897166" target="_blank" class="cta-button">Get Your Cash Offer Today</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Sell to Dirt Divas?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning-Fast Closings</h3>
+                    <p>We close in days, not months. No waiting for buyer financing or endless negotiations. Your cash is ready when you are.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>All-Cash Offers</h3>
+                    <p>No financing contingencies, no deal falling through at the last minute. Just straightforward cash offers you can count on.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Established Buyer Network</h3>
+                    <p>Our trusted buyers know us and want our deals. We'll either assign your contract to a buyer ready to grab it while it's hot, or we'll double close - whatever gets you paid fastest.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Zero Hassles</h3>
+                    <p>No listing fees, no repairs, no showings. We handle all the paperwork and make selling your land effortless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us vs Others -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Why Work With a Wholesale Investor?</h2>
+            <div class="comparison">
+                <h3>Dirt Divas vs. Traditional Methods</h3>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <strong>Speed</strong>
+                        <p><strong>Us:</strong> Close in 7-14 days<br>
+                        <strong>Agents:</strong> Average 6-12 months<br>
+                        <strong>Other Firms:</strong> 30-90 days</p>
+                    </div>
+                    <div class="comparison-item">
+                        <strong>Fees & Costs</strong>
+                        <p><strong>Us:</strong> Zero fees, we cover closing<br>
+                        <strong>Agents:</strong> 6-10% commission + costs<br>
+                        <strong>Other Firms:</strong> Hidden fees & charges</p>
+                    </div>
+                    <div class="comparison-item">
+                        <strong>Certainty</strong>
+                        <p><strong>Us:</strong> 100% cash, no contingencies<br>
+                        <strong>Agents:</strong> Deals often fall through<br>
+                        <strong>Other Firms:</strong> May resell your contract</p>
+                    </div>
+                    <div class="comparison-item">
+                        <strong>Convenience</strong>
+                        <p><strong>Us:</strong> No prep, showings, or repairs<br>
+                        <strong>Agents:</strong> Constant showings & prep<br>
+                        <strong>Other Firms:</strong> May require improvements</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #4b5563;">
+                <p><strong>Our Advantage:</strong> We're wholesale real estate investors with an established network of buyers who trust us and are actively competing for our deals. When you work with us, we'll either assign your contract directly to one of our eager buyers who will grab it while it's hot, or we'll double close to ensure you get paid quickly. Unlike acquisition firms that may tie up your property, or agents who wait for the perfect buyer, our buyers know us, trust our deals, and move fast. This means faster closings, guaranteed cash, and zero uncertainty.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2>Our Simple 3-Step Process</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Contact Us</h3>
+                    <p>Fill out our quick form or give us a call. Tell us about your land - no obligation, just information gathering.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Your Cash Offer</h3>
+                    <p>We'll evaluate your property and present you with a fair, all-cash offer within 24-48 hours. No pressure, no games.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Close & Get Paid</h3>
+                    <p>We'll either assign the contract to one of our eager buyers or double close - whichever path gets you paid fastest. Pick your closing date and get your cash.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2>Why Work With Michelle & Samantha?</h2>
+            <div class="team-intro">
+                <p>As the Dirt Divas, we bring years of real estate expertise, a passion for fair deals, and a commitment to making your land sale as smooth as possible. We're not just investors - we're your partners in getting the best outcome for your property.</p>
+            </div>
+            <div class="team-benefits">
+                <div class="benefit">
+                    <h3>🎯 Proven Track Record</h3>
+                    <p>Hundreds of successful land transactions with satisfied sellers who chose speed and certainty over traditional methods.</p>
+                </div>
+                <div class="benefit">
+                    <h3>💼 Industry Expertise</h3>
+                    <p>Combined decades of experience in real estate investment and wholesale transactions. We know land, and we know value.</p>
+                </div>
+                <div class="benefit">
+                    <h3>🌟 Trusted Network</h3>
+                    <p>Our buyers compete for our deals because they know we deliver quality properties. We'll assign your contract to a hot buyer or double close - whatever works best.</p>
+                </div>
+                <div class="benefit">
+                    <h3>❤️ Personal Touch</h3>
+                    <p>We're not a faceless corporation. You'll work directly with us, and we'll guide you through every step with transparency and care.</p>
+                </div>
+                <div class="benefit">
+                    <h3>⚖️ Fair & Honest</h3>
+                    <p>We provide market-based offers and never use high-pressure tactics. Your best interest is our priority.</p>
+                </div>
+                <div class="benefit">
+                    <h3>🚀 Results-Driven</h3>
+                    <p>We move fast because we can. Our buyers are waiting, our process is streamlined, and your cash is ready to go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form-section">
+        <div class="container">
+            <h2>Ready to Sell Your Land?</h2>
+            <p>Get your no-obligation cash offer today. It takes just 2 minutes!</p>
+            <div class="form-container">
+                <a href="https://form.jotform.com/253114648897166" target="_blank" class="form-button">Click Here to Fill Out Your Information & Get Your Cash Offer</a>
+                <p style="margin-top: 20px; color: #666; font-size: 0.95rem;">You'll be taken to our secure form in a new window</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>DIRT DIVAS ACQUISITIONS</strong></p>
+            <p>Specialists in Fast Land Sales | Cash Offers | Trusted Partners</p>
+            <p>&copy; 2024 Dirt Divas Acquisitions. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
